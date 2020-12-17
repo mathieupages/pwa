@@ -5,8 +5,13 @@ let image3 = document.getElementById("images3");
 let image4 = document.getElementById("images4");
 let image5 = document.getElementById("images5");
 let image6 = document.getElementById("images6");
+let desc1 = document.getElementById("desc1");
+let desc2 = document.getElementById("desc2");
+let desc3 = document.getElementById("desc3");
+let desc4 = document.getElementById("desc4");
+let desc5 = document.getElementById("desc5");
+let desc6 = document.getElementById("desc6");
 let d1 = document.getElementById("block1");
-let d2 = document.getElementById("block2");
 let newP = document.createElement('p');
 
 const json = '{"images1":"la vie d\'un geek", "images2":"space invader vive les années 80","images3":"Vive les geeks","images4":"c\'est à moi que tu parle","images5":"KAMEHAMEHA !!","images6":"Un jour peut être" }';
@@ -27,22 +32,24 @@ togg1.addEventListener("click", () => {
 })
 
 image1.addEventListener("click", () => {
-    newP.remove();
-    newP = document.createElement('p');
-    newP.prepend(text1)
+    if (getComputedStyle(desc1).display != "none") {
+        desc1.style.display = "none";
+    } else {
+        desc1.style.display = "p";
+    }
 })
 image2.addEventListener("click", () => {
-    d2.prepend(text2)
+    desc2.prepend(text2)
 })
 image3.addEventListener("click", () => {
-    d2.prepend(text3)
+    desc3.prepend(text3)
 })
 image4.addEventListener("click", () => {
-    d2.prepend(text4)
+    desc4.prepend(text4)
 })
 image5.addEventListener("click", () => {
-    d2.prepend(text5)
+    desc5.prepend(text5)
 })
 image6.addEventListener("click", () => {
-    d2.prepend(text6)
+    desc6.prepend(text6)
 })
