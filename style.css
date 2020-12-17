@@ -1,0 +1,21 @@
+body {
+  background-color: lightblue;
+  text-align: center;
+}
+
+h1 {
+  color: navy;
+  margin-left: 20px;
+}
+
+.column{
+    padding: 10px 4px;
+}
+
+#block1{
+    text-align: center;
+}
+
+#block2{
+    padding-top: 20px;
+}
