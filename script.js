@@ -32,11 +32,7 @@ togg1.addEventListener("click", () => {
 })
 
 image1.addEventListener("click", () => {
-    if (getComputedStyle(desc1).display != "none") {
-        desc1.style.display = "none";
-    } else {
-        desc1.style.display = "p";
-    }
+    desc1.prepend(text1)
 })
 image2.addEventListener("click", () => {
     desc2.prepend(text2)
