@@ -23,6 +23,16 @@ let text4 = document.createTextNode(data.images4);
 let text5 = document.createTextNode(data.images5);
 let text6 = document.createTextNode(data.images6);
 
+
+window.onload = () => {
+    'use strict';
+
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+            .register('./sw.js');
+    }
+}
+
 togg1.addEventListener("click", () => {
     if (getComputedStyle(d1).display != "none") {
         d1.style.display = "none";
