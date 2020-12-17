@@ -24,17 +24,6 @@ let text5 = document.createTextNode(data.images5);
 let text6 = document.createTextNode(data.images6);
 
 
-window.onload = () => {
-    'use strict';
-
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker
-            .register('./sw.js').then(res => {
-                console.log("service worker loaded")
-            });
-    }
-} 
-
 togg1.addEventListener("click", () => {
     if (getComputedStyle(d1).display != "none") {
         d1.style.display = "none";
