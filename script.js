@@ -29,9 +29,11 @@ window.onload = () => {
 
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker
-            .register('./sw.js');
+            .register('./sw.js').then(res => {
+                console.log("service worker loaded")
+            });
     }
-}
+} 
 
 togg1.addEventListener("click", () => {
     if (getComputedStyle(d1).display != "none") {
